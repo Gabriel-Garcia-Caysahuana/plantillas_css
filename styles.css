@@ -1,0 +1,774 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Inicio de Botones */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Styles */
+.btn-default {
+    background-color: #ddd;
+    color: #333;
+}
+
+.btn-default:hover {
+    background-color: #bbb;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.btn-success:hover {
+    background-color: #1c7430;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-danger:hover {
+    background-color: #a71d2a;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+}
+
+.btn-outline:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-rounded {
+    background-color: #6c757d;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.btn-rounded:hover {
+    background-color: #5a6268;
+}
+
+.btn-shadow {
+    background-color: #17a2b8;
+    color: #fff;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-shadow:hover {
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-gradient {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-gradient:hover {
+    opacity: 0.9;
+}
+
+.btn-hover {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hover:hover {
+    background-color: #0056b3;
+}
+
+.btn-zoom {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-zoom:hover {
+    transform: scale(1.1);
+}
+.btn-float {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-float:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.btn-glow {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+}
+
+.btn-border-slide {
+    background-color: transparent;
+    color: #333;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.btn-border-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-border-slide:hover {
+    color: white;
+}
+
+.btn-border-slide:hover::before {
+    left: 0;
+}
+.btn-rotate {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-rotate:hover {
+    transform: rotate(5deg);
+}
+
+.btn-bounce {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-bounce:hover {
+    transform: translateY(-5px);
+}
+
+
+.btn-fade {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.btn-fade:active {
+    color: transparent;
+}
+
+.btn-gradient-animated {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    background-size: 200% 200%;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    animation: gradientMove 2s infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.btn-vibrate {
+    background-color: #e83e8c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    transition: transform 0.1s ease;
+}
+
+.btn-vibrate:hover {
+    transform: translateX(-2px);
+}
+
+.btn-vibrate:hover {
+    animation: vibrate 0.3s linear infinite;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(-2px);
+    }
+}
+
+/* Boton complejo */
+/* Botón avanzado con gradiente */
+.btn-complex {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white; /* Color del texto */
+    background: linear-gradient(45deg, #a11a5d, #352214);
+    border: 0.5px solid rgba(101, 50, 125, 0.8);
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 0, 153, 0.5);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    overflow: hidden; /* Para mantener un diseño limpio */
+    z-index: 2;
+}
+
+/* Fondo animado (pseudo-elemento) */
+.btn-complex::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    z-index: 1; /* Detrás del texto */
+    transition: all 0.5s ease;
+}
+
+/* Hover: efectos dinámicos */
+.btn-complex:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 0, 255, 0.8);
+}
+
+.btn-complex:hover::before {
+    left: 0;
+}
+
+
+
+
+
+/* Fin de Botones */
+
+/* Tarjetas   ---------------------------       */
+
+/* Tarjeta básica */
+.card-basic {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.card-basic:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjeta con imagen */
+.card-image {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-image h2 {
+    margin: 10px 0;
+}
+
+/* Tarjeta con borde y sombra */
+.card-bordered {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 6px 10px rgba(0, 123, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-bordered:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Tarjeta con fondo gradiente */
+.card-gradient {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-gradient h2 {
+    margin-bottom: 10px;
+}
+
+/* Tarjeta minimalista */
+.card-minimal {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.card-minimal:hover {
+    background-color: #f0f0f0;
+}
+/* Tarjeta con íconos y texto alineado a la izquierda */
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon .icon img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.card-icon .content h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-icon .content p {
+    font-size: 14px;
+    color: #666;
+}
+/* Tarjeta con superposición de texto en imagen */
+.card-overlay {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-overlay:hover .overlay {
+    opacity: 1;
+}
+
+/* Tarjeta con esquema vertical  */
+.card-vertical {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    width: 250px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-vertical:hover {
+    transform: translateY(-5px);
+}
+
+.card-vertical h2 {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card-vertical p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+}
+/* Tarjeta circular  */
+.card-circle {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-circle img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card-circle:hover {
+    transform: scale(1.1);
+}
+
+/* Tarjeta animada (flip card) */
+.card-flip {
+    perspective: 1000px;
+    width: 300px;
+    height: 200px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-back {
+    background-color: #17a2b8;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Tarjeta de Producto con Botón Flotante */
+.card-product {
+    position: relative;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-product .content {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.card-product .btn-buy {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-product .btn-buy:hover {
+    background-color: #1e7e34;
+}
+
+/* Tarjeta con Efecto Hover de Desplazamiento */
+.card-hover-text {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover-text img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-hover-text .hover-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    transition: top 0.3s ease;
+}
+
+.card-hover-text:hover .hover-content {
+    top: 0;
+}
+
+/* Tarjeta con Indicadores */
+.card-with-badge {
+    position: relative;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
+
+.card-with-badge img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-with-badge .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Tarjeta con Fondo Expandible */
+.card-expandable {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-expandable .bg-expand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.card-expandable:hover .bg-expand {
+    transform: scale(1.2);
+}
+
+.card-expandable .content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+
+/* Tarjeta con Separadores */
+
+.card-separated {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-separated hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+/* Tarjeta Animada (Zoom de Imagen) */
+
+.card-zoom {
+    position: relative;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-zoom .img-container {
+    overflow: hidden;
+}
+
+.card-zoom img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-zoom:hover img {
+    transform: scale(1.1);
+}
